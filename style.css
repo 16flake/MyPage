@@ -1,0 +1,1076 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
+/* ========== Basic Reset ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  text-decoration: none;
+  list-style-type: none;
+  scroll-behavior: smooth;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+/* ========== Root Colors ========== */
+:root {
+  --font-color: #ff7200;
+  --alt-Font-color: wheat;
+  --thirthy: #ffffff;
+  --sixthy: black;
+}
+
+/* ========== Hide Scroll Bar and Prevent Select ========== */
+.hideScrollBar {
+  overflow-y: scroll;
+}
+
+.hideScrollBar::-webkit-scrollbar {
+  display: none;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.hidden {
+  display: none;
+}
+
+/* ========== Add Animation ========== */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    bottom: -300px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+/* ========== Body Section ========== */
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* ========== Home Page Section ========== */
+.HomePageSection {
+  width: 100vw;
+  height: 100vh;
+  color: var(--thirthy);
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4) 50%,
+      rgba(0, 0, 0, 0.4) 50%
+    ),
+    url(img/photo-1583144568008-76743354fa5a.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* ===== Navigation Bar Section Style Start ===== */
+.NavContainer {
+  text-transform: uppercase;
+}
+
+.Nav-small-screen {
+  text-align: center;
+}
+
+.NavContainer .navbar-name,
+.nav-item a {
+  color: var(--thirthy); /* Set color of the nav items*/
+}
+
+.NavContainer .navbar-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 0 30px;
+  padding: 15px;
+}
+
+.navbar-name {
+  text-decoration: none;
+}
+
+.navbar-name span {
+  color: var(--font-color);
+}
+
+.nav-item-container {
+  margin-right: 100px;
+}
+
+.nav-item {
+  padding-inline: 40px;
+}
+
+.nav-item a {
+  font-size: 16px;
+  word-spacing: 2px;
+  padding: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.nav-item a:hover {
+  color: var(--font-color);
+  border-bottom: 1px solid var(--font-color);
+}
+
+.nav-item a:active {
+  color: var(--thirthy);
+  border: none;
+}
+
+/* ===== Navigation Bar Section Style End ===== */
+
+/* ===== Home Page Content Section Style Start ===== */
+.HomePageContainer {
+  margin: 100px 90px 0 0;
+  text-align: right;
+}
+.HomePageContainer h2 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.HomePageContainer h2 span {
+  color: var(--font-color);
+  border-bottom: 1px solid var(--font-color);
+}
+
+.HomePageContainer p {
+  font-size: 24px;
+  width: 60%;
+  float: right;
+
+  padding: 20px 40px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+}
+
+.button-container {
+  margin-right: 90px;
+  float: right;
+}
+.button-container .download-button {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 10px 20px;
+
+  border: 2px solid var(--font-color);
+  background: transparent;
+  color: var(--font-color);
+
+  font-weight: lighter;
+  transition: 0.5s ease-in-out;
+}
+
+.button-container .download-button:hover {
+  background: var(--font-color);
+  color: var(--alt-Font-color);
+
+  cursor: pointer;
+}
+
+.button-container .download-button:active {
+  color: var(--font-color);
+  background-color: var(--alt-Font-color);
+  transition: 0.2s;
+}
+
+/* ===== Home Page Content Section Style End ===== */
+
+/* ========== About Me Section Style Start ========== */
+
+.stickyNavigation {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.8);
+  transition: 0.5s ease-in-out;
+}
+
+.AboutMeSection {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+.image-container {
+  margin: 150px 0 0 150px;
+  width: 90%;
+}
+
+.myPicture-container {
+  width: 450px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.aboutMe-Container {
+  margin: 150px 0 0 0;
+}
+
+.aboutMe-Container h2 {
+  font-size: 44px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 40%;
+  border-left: 5px solid var(--font-color);
+  padding: 10px;
+}
+
+.aboutMe-Container p {
+  width: 90%;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 40px;
+  padding: 30px 0 0 15px;
+}
+
+.aboutMe-Container a {
+  text-decoration: none;
+}
+
+.aboutMe-Container .contact-button {
+  width: 190px;
+  height: 80px;
+  margin: 30px 0 60px;
+  background: transparent;
+  border: 2px solid var(--sixthy);
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  transition: 0.4s ease;
+}
+
+.aboutMe-Container .contact-button:hover {
+  background: var(--sixthy);
+  color: var(--thirthy);
+  cursor: pointer;
+}
+
+.aboutMe-Container .contact-button:active {
+  background: var(--thirthy);
+  border: none;
+  color: var(--sixthy);
+}
+
+.icons-container {
+  width: 70%;
+  border-top: 2px solid black;
+  text-align: center;
+}
+
+.icons-container img {
+  width: 30px;
+  height: 30px;
+  margin: 20px 10px;
+  border-radius: 2px;
+
+  transition: 0.2s ease;
+}
+/* ========== About Me Section Style End ========== */
+
+/* ========== Project Section Style Start ========== */
+
+.ProjectSection {
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+}
+
+.ProjectSection h2 {
+  font-size: 44px;
+  text-transform: uppercase;
+  font-weight: bold;
+  width: 15%;
+  margin: 100px auto 0;
+  border-left: 5px solid var(--font-color);
+}
+
+.ProjectSection p {
+  font-size: 20px;
+}
+
+.carousel-container {
+  margin-inline: auto;
+  max-width: 85vw;
+  max-height: 75vh;
+}
+
+.carousel-container img {
+  max-width: 85vw;
+  max-height: 75vh;
+}
+
+.carousel-caption {
+  padding: 20px 40px;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+  margin: 0 auto 20px;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+}
+
+.carousel-caption h5 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-inline: auto;
+  padding-bottom: 5px;
+}
+
+.carousel-caption a {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px 30px;
+  text-transform: uppercase;
+
+  border: 2px solid var(--font-color);
+  background: transparent;
+  color: var(--font-color);
+
+  font-weight: lighter;
+  transition: 0.5s ease-in-out;
+}
+
+.modal-body {
+  text-align: left;
+}
+
+.carousel-caption .button {
+  color: var(--font-color);
+  text-decoration: none;
+}
+
+.carousel-caption a:hover {
+  background: var(--font-color);
+  color: var(--alt-Font-color);
+
+  cursor: pointer;
+}
+
+.carousel-caption a:active {
+  color: var(--font-color);
+  background-color: var(--alt-Font-color);
+  transition: 0.2s;
+}
+
+/* ========== Project Section Style End ========== */
+
+.ContactMeSection {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+}
+
+.HireMe-Container {
+  width: 40%;
+  height: 90%;
+  margin: 0 80px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.HireMe-Container h2 {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-left: 5px solid var(--font-color);
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+.HireMe-Container p {
+  font-size: 20px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.ContactMe-Container {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContactMe-Container label {
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.ContactMe-Container .inputContainer .inputField {
+  padding-bottom: 30px;
+}
+
+.ContactMe-Container .inputContainer .inputField input[type="text"],
+input[type="email"] {
+  padding: 10px;
+  width: 900px;
+  height: 35px;
+}
+
+.ContactMe-Container .inputContainer .inputField textarea {
+  padding: 10px;
+  width: 900px;
+  height: 200px;
+}
+
+.ContactMe-Container .inputContainer .inputField input[type="text"],
+input[type="email"],
+textarea {
+  background: transparent;
+  border: 0.5px solid var(--sixthy);
+}
+
+.submitButton button {
+  font-size: 12px;
+  padding: 15px 40px;
+  font-weight: bolder;
+  background: transparent;
+  border: 2px solid var(--sixthy);
+  text-transform: uppercase;
+
+  transition: 0.4s ease;
+}
+
+.submitButton button:hover {
+  cursor: pointer;
+  color: var(--thirthy);
+  background: var(--sixthy);
+}
+
+/* ========== Responsive Design ========== */
+
+footer {
+  text-align: center;
+  margin: 0 auto 30px auto;
+  padding-top: 20px;
+  text-transform: uppercase;
+  border-top: 1px solid var(--sixthy);
+  width: 95%;
+}
+
+/* Phone Size */
+@media screen and (max-width: 425px) and (min-width: 320px) {
+  /* ===== Navigation Section Style Start ===== */
+
+  .side-bar-container {
+    margin-top: 30px;
+  }
+
+  .side-bar-container .nav-item {
+    margin: 0 auto 20px;
+    width: 85%;
+  }
+
+  .side-bar-container .nav-item a {
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .nav-item a {
+    color: var(--sixthy);
+  }
+
+  .nav-item a:active {
+    color: var(--thirthy);
+    border: none;
+  }
+
+  .NavContainer .navbar-name {
+    font-size: 18px;
+    margin: 0;
+    padding: 15px 5px;
+  }
+
+  .HomePageContainer {
+    margin: 70px 10px 0 0;
+  }
+
+  .HomePageContainer h2 {
+    font-size: 28px;
+  }
+
+  .HomePageContainer p {
+    font-size: 12px;
+    width: 95%;
+
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+
+  .button-container {
+    margin-right: 10px;
+  }
+
+  .button-container button {
+    font-size: 16px;
+    margin: 10px 0;
+    padding: 10px 15px;
+  }
+
+  /* ===== Navigation Section Style End ===== */
+
+  /* ===== About Me Section Style Start ===== */
+
+  .AboutMeSection {
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image-container {
+    margin: 50px auto 30px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutMe-Container {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+  }
+
+  .myPicture-container {
+    width: 250px;
+  }
+
+  .aboutMe-Container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutMe-Container h2 {
+    font-size: 28px;
+    width: 88%;
+    margin-inline: auto;
+    border-left: 5px solid var(--font-color);
+  }
+
+  .aboutMe-Container p {
+    width: 90%;
+    margin-inline: auto;
+    font-size: 12px;
+    text-align: justify;
+    line-height: 20px;
+    padding: 0 20px;
+  }
+
+  .aboutMe-Container .contact-button {
+    width: 100px;
+    height: 40px;
+    margin: 10px 0 20px;
+    border: 2px solid var(--sixthy);
+    font-size: 10px;
+  }
+
+  .icons-container img {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* ===== About Me Section Style End ===== */
+
+  /* ===== Project Section Style Start ===== */
+
+  .ProjectSection {
+    height: auto;
+    margin: 50px 0 150px;
+  }
+
+  .ProjectSection h2 {
+    font-size: 28px;
+    width: 60%;
+    margin: 100px auto 0;
+  }
+
+  .ProjectSection p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+
+  .carousel-container {
+    margin-inline: auto;
+    max-width: 98vw;
+    max-height: 100vh;
+  }
+
+  .carousel-container img {
+    max-width: 98vw;
+    max-height: 100vh;
+  }
+
+  /* ===== Project Section Style End ===== */
+
+  /* ===== Contact Me Section Style Start ===== */
+  .ContactMeSection {
+    height: auto;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .HireMe-Container {
+    width: 90%;
+  }
+
+  .HireMe-Container h2 {
+    font-size: 28px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+  }
+
+  .HireMe-Container p {
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+  .ContactMe-Container label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .ContactMe-Container .inputContainer .inputField input[type="text"],
+  input[type="email"] {
+    padding: 10px;
+    width: 300px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  .ContactMe-Container .inputContainer .inputField textarea {
+    padding: 10px;
+    width: 300px;
+    height: 100px;
+    font-size: 12px;
+  }
+
+  .submitButton button {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  /* ===== Contact Me Section Style End ===== */
+
+  footer {
+    font-size: 12px;
+    padding-top: 10px;
+    margin: 0 auto 10px auto;
+    width: 90%;
+  }
+}
+
+/* tablet style */
+@media screen and (max-width: 768px) and (min-width: 426px) {
+  /* ===== Navigation Section Style Start ===== */
+
+  .side-bar-container {
+    margin-top: 40px;
+  }
+
+  .side-bar-container .nav-item {
+    margin: 0 auto 40px;
+    width: 70%;
+  }
+
+  .side-bar-container .nav-item a {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .nav-item a {
+    color: var(--sixthy);
+  }
+
+  .NavContainer .navbar-name {
+    font-size: 22px;
+    margin: 0 0 0 20px;
+    padding: 15px;
+  }
+
+  .HomePageContainer {
+    margin: 70px 30px 0 0;
+  }
+
+  .HomePageContainer h2 {
+    font-size: 32px;
+  }
+
+  .HomePageContainer p {
+    font-size: 16px;
+    width: 85%;
+
+    padding: 15px 20px;
+    border-radius: 10px;
+  }
+
+  .button-container {
+    margin-right: 30px;
+  }
+
+  .button-container button {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px 15px;
+  }
+
+  /* ===== Navigation Section Style End ===== */
+
+  /* ===== About Me Section Style Start ===== */
+  .AboutMeSection {
+    height: 100vh;
+
+    display: flex;
+  }
+
+  .image-container {
+    margin: 100px 30px 0 50px;
+    width: 80%;
+  }
+
+  .myPicture-container {
+    width: 300px;
+  }
+
+  .aboutMe-Container {
+    margin: 100px 0 0 0;
+    width: 100%;
+  }
+
+  .aboutMe-Container h2 {
+    font-size: 32px;
+    width: 85%;
+  }
+
+  .aboutMe-Container p {
+    width: 80%;
+    font-size: 16px;
+    line-height: 25px;
+    padding: 0;
+  }
+
+  .aboutMe-Container .contact-button {
+    width: 110px;
+    height: 45px;
+    margin: 10px 0 20px;
+    border: 2px solid var(--sixthy);
+    font-size: 12px;
+  }
+
+  .icons-container img {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* ===== About Me Section Style End ===== */
+
+  /* ===== Project Section Style Start ===== */
+
+  .ProjectSection {
+    height: auto;
+    margin-bottom: 200px;
+  }
+
+  .ProjectSection h2 {
+    font-size: 32px;
+    width: 30%;
+    margin: 0 auto 0;
+  }
+
+  .ProjectSection p {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .carousel-container {
+    margin-inline: auto;
+    max-width: 98vw;
+    max-height: 100vh;
+  }
+
+  .carousel-container img {
+    max-width: 98vw;
+    max-height: 100vh;
+  }
+
+  /* ===== Project Section Style End ===== */
+
+  /* ===== Contact Me Section Style Start ===== */
+  .ContactMeSection {
+    height: 100vh;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .HireMe-Container {
+    width: 90%;
+  }
+
+  .HireMe-Container h2 {
+    font-size: 32px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+  }
+
+  .HireMe-Container p {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .ContactMe-Container label {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .ContactMe-Container .inputContainer .inputField input[type="text"],
+  input[type="email"] {
+    padding: 15px;
+    width: 700px;
+    height: 25px;
+    font-size: 14px;
+  }
+
+  .ContactMe-Container .inputContainer .inputField textarea {
+    padding: 15px;
+    width: 700px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .submitButton button {
+    font-size: 14px;
+    padding: 10px 30px;
+  }
+  /* ===== Contact Me Section Style End ===== */
+
+  footer {
+    font-size: 16px;
+    padding-top: 10px;
+    margin: 0 auto 10px auto;
+    width: 90%;
+  }
+}
+
+/* laptop style */
+@media screen and (max-width: 1024px) and (min-width: 769px) {
+  /* ===== Navigation Section Style Start ===== */
+  .NavContainer .navbar-name {
+    font-size: 26px;
+    margin: 0 0 0 20px;
+    padding: 25px;
+  }
+
+  .nav-item-container {
+    margin: 0 30px 0 0;
+  }
+  .nav-item {
+    padding-inline: 20px;
+  }
+
+  .nav-item a {
+    font-size: 16px;
+  }
+
+  .HomePageContainer {
+    margin: 90px 75px 0 0;
+  }
+
+  .HomePageContainer h2 {
+    font-size: 36px;
+  }
+
+  .HomePageContainer p {
+    font-size: 18px;
+    width: 85%;
+
+    padding: 20px 25px;
+    border-radius: 15px;
+  }
+
+  .button-container {
+    margin-right: 75px;
+  }
+
+  .button-container button {
+    font-size: 18px;
+    margin: 10px 0;
+    padding: 10px 15px;
+  }
+
+  /* ===== Navigation Section Style End ===== */
+
+  /* ===== About Me Section Style Start ===== */
+  .AboutMeSection {
+    height: 100vh;
+
+    display: flex;
+  }
+
+  .image-container {
+    margin: 130px 0 0 80px;
+  }
+
+  .myPicture-container {
+    width: 350px;
+  }
+
+  .aboutMe-Container {
+    margin: 130px 0 0 0;
+    width: 100%;
+  }
+
+  .aboutMe-Container h2 {
+    font-size: 38px;
+    width: 85%;
+  }
+
+  .aboutMe-Container p {
+    width: 80%;
+    font-size: 20px;
+    line-height: 35px;
+    padding: 10px 0;
+  }
+
+  .aboutMe-Container .contact-button {
+    width: 130px;
+    height: 55px;
+    margin: 20px 0 50px;
+  }
+
+  /* ===== About Me Section Style End ===== */
+
+  /* ===== Project Section Style Start ===== */
+
+  .ProjectSection {
+    height: 100vh;
+  }
+
+  .ProjectSection h2 {
+    font-size: 38px;
+    width: 30%;
+    margin: 130px auto 0;
+  }
+
+  .ProjectSection p {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .carousel-container {
+    margin-inline: auto;
+    max-width: 95vw;
+    max-height: 100vh;
+  }
+
+  .carousel-container img {
+    max-width: 95vw;
+    max-height: 100vh;
+  }
+
+  /* ===== Project Section Style End ===== */
+
+  /* ========== Project Section Style End ========== */
+
+  .HireMe-Container {
+    height: 95%;
+    margin: 0 45px;
+  }
+  .HireMe-Container h2 {
+    font-size: 38px;
+    border-left: 5px solid var(--font-color);
+    padding: 0 10px;
+    margin-bottom: 30px;
+  }
+
+  .HireMe-Container p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .ContactMe-Container {
+    height: 100%;
+  }
+
+  .ContactMe-Container label {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .ContactMe-Container .inputContainer .inputField {
+    padding-bottom: 30px;
+  }
+
+  .ContactMe-Container .inputContainer .inputField input[type="text"],
+  input[type="email"] {
+    width: 500px;
+  }
+
+  .ContactMe-Container .inputContainer .inputField textarea {
+    width: 500px;
+  }
+
+  /* ========== Responsive Design ========== */
+}
+
+/* large laptop style */
+@media screen and (max-width: 1440px) and (min-width: 1025px) {
+}
